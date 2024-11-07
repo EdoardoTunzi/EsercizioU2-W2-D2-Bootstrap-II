@@ -6,40 +6,63 @@
 
 // 2. Include any default variable overrides here
 
-//custom fonts variables
-$font-size-base: 1rem;
-$h7-font-size: $font-size-base * 1;
-$h8-font-size: $font-size-base * 0.875;
-$h9-font-size: $font-size-base * 0.75;
-$h10-font-size: $font-size-base * 0.5;
-
-$custom-font-sizes: (
-  7: $h7-font-size,
-  8: $h8-font-size,
-  9: $h9-font-size,
-  10: $h10-font-size,
-);
 //custom borders
 $custom-border-width: (
-  6: 1px,
-  7: 2px,
-  8: 3px,
-  9: 4px,
-  10: 5px,
+  6: 6px,
+  7: 7px,
+  8: 8px,
+  9: 9px,
+  10: 10px,
 );
+
 //custom button padding
-$btn-padding-y: 0.75rem;
 $btn-padding-x: 2.5rem;
+$btn-padding-y: 0.75rem;
+
 //custom gutter
 $grid-gutter-width: 0.5rem;
+//custom colors override
+$danger: #ff0073;
+$info: #00ffea;
+$light: #f3eeff;
 
 // 3. Include remainder of required Bootstrap stylesheets (including any separate color mode stylesheets)
 @import "../../bootstrap/variables";
 @import "../../bootstrap/variables-dark";
-
 // 4. Include any default map overrides here
-$font-sizes: map-merge($font-sizes, $custom-font-sizes);
+
+//Custom overrides using existing variables
+
+//custom border-radius
+$badge-border-radius: $border-radius-pill;
+$input-border-radius: $border-radius-pill;
+$btn-border-radius: $border-radius-pill;
+
+//custom cards colors map
+$card-bg: $dark;
+$card-color: $info;
+$card-border-radius: 2rem;
+
+//custom font-size map
+$new-font-sizes: (
+  7: 0.9rem,
+  8: 0.8rem,
+  9: 0.7rem,
+  10: 0.6rem,
+);
+$font-sizes: map-merge($font-sizes, $new-font-sizes);
+//custom borders map
 $border-widths: map-merge($border-widths, $custom-border-width); // 5. Include remainder of required parts
+
+//custom theme-colors map
+
+$custom-theme-colors: (
+  epicode-1: #5726c3,
+  epicode-2: #8625a5,
+  epicode-3: #cb2376,
+);
+$theme-colors: map-merge($theme-colors, $custom-theme-colors);
+
 @import "../../bootstrap/maps";
 @import "../../bootstrap/mixins";
 @import "../../bootstrap/root";
