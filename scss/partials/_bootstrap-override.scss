@@ -27,6 +27,9 @@ $custom-border-width: (
   9: 4px,
   10: 5px,
 );
+//custom button padding
+$btn-padding-y: 0.75rem;
+$btn-padding-x: 2.5rem;
 
 // 3. Include remainder of required Bootstrap stylesheets (including any separate color mode stylesheets)
 @import "../../bootstrap/variables";
