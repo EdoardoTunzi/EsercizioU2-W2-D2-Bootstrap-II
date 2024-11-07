@@ -6,13 +6,35 @@
 
 // 2. Include any default variable overrides here
 
+//custom fonts variables
+$font-size-base: 1rem;
+$h7-font-size: $font-size-base * 1;
+$h8-font-size: $font-size-base * 0.875;
+$h9-font-size: $font-size-base * 0.75;
+$h10-font-size: $font-size-base * 0.5;
+
+$custom-font-sizes: (
+  7: $h7-font-size,
+  8: $h8-font-size,
+  9: $h9-font-size,
+  10: $h10-font-size,
+);
+//custom borders
+$custom-border-width: (
+  6: 1px,
+  7: 2px,
+  8: 3px,
+  9: 4px,
+  10: 5px,
+);
+
 // 3. Include remainder of required Bootstrap stylesheets (including any separate color mode stylesheets)
 @import "../../bootstrap/variables";
 @import "../../bootstrap/variables-dark";
 
 // 4. Include any default map overrides here
-
-// 5. Include remainder of required parts
+$font-sizes: map-merge($font-sizes, $custom-font-sizes);
+$border-widths: map-merge($border-widths, $custom-border-width); // 5. Include remainder of required parts
 @import "../../bootstrap/maps";
 @import "../../bootstrap/mixins";
 @import "../../bootstrap/root";
